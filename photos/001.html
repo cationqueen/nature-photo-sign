@@ -1,0 +1,215 @@
+<!-- #001.html# -->
+<!--
+【公開ステータス】
+
+status : draft / ready / public
+現在   : ready
+
+※ ready = 内容は完成、公開タイミング待ち
+-->
+
+<!--
+このページは「写真ページの完成形テンプレート」
+今後はこのファイルをコピーして
+・画像
+・タイトル
+・風景の説明
+・自然のサイン
+のみを書き換える
+-->
+<!--
+【写真ページ 命名ルール】
+
+ファイル名：
+photos/002.html
+images/002.jpg
+
+ページタイトル：
+写真002：〇〇〇（場所・象徴語）
+
+カテゴリ：
+山｜神社｜海｜森 から必ず1つ
+
+写真タイトルの考え方：
+「見たまま」＋「象徴になる言葉」を短く
+
+例：
+・山道と光
+・静かな参道
+・水平線と夕映え
+-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>写真001：〇〇〇｜山と神社の癒しフォト素材集（自然のサイン）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="山・神社・自然・癒しの風景写真（フリー画像）を配布。写真001：〇〇〇の風景説明と自然のサイン（象意）を掲載。" />
+  <meta name="site:public" content="0" />
+
+  <script>
+    (function () {
+      var isPublic = document.querySelector('meta[name="site:public"]')?.content === "1";
+      if (isPublic) return;
+
+      var m = document.createElement("meta");
+      m.name = "robots";
+      m.content = "noindex, nofollow";
+      document.head.appendChild(m);
+    })();
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.8;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+    a { color: inherit; }
+    header {
+      background: #111;
+      color: #f5f5f5;
+      padding: 1rem 1.5rem;
+    }
+    .site-title {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 0.6rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 0.2rem 0 0.8rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 2rem 0 0.5rem;
+      border-left: 4px solid #555;
+      padding-left: 0.5rem;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .img-wrap {
+      margin-top: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      display: block;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 0.6rem;
+      padding: 0.6rem 0.9rem;
+      border-radius: 0.5rem;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 1rem 2rem;
+      font-size: 0.8rem;
+      color: #666;
+      background: #fafafa;
+    }
+    footer .inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <p class="site-title">
+      <a href="../index.html" style="color:#f5f5f5; text-decoration:none;">
+        山と神社の癒しフォト素材集(フリー画像) 〜自然のサイン〜
+      </a>
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <p class="meta"><a href="../index.html">← トップへ戻る</a></p>
+      <h1>文珠山山頂と天使の梯子</h1>
+      <p class="meta">山・神社・癒しの風景｜フリー画像・商用利用可</p>
+      <p class="meta">山の風景</p>
+      
+      <div class="img-wrap">
+        <!-- 画像ファイルは例：../images/001.jpg に置く想定 -->
+        <img src="../images/001.jpg" alt="山の登山道に広がる落ち葉の風景。静かな自然と癒しを感じるフリー写真" />
+      </div>
+
+      <p class="note">※画像が表示されない場合：<code>../images/001.jpg</code> の場所・ファイル名を確認してください。</p>
+
+      <h2>風景の説明</h2>
+      <p>
+        山口県・周防大島にある文珠山の山頂から見た景色です。<br>   
+        新年のとても寒い日に登りました。  <br> 
+        登り道はきつく、体にこたえる道のりでしたが、 <br>  
+        山並みの向こうに広がる海と、雲の切れ間から差し込む<br>   
+       「天使の梯子」の光がとても印象的でした。<br> 
+        苦労して登ったからこそ、心に残る風景になりました。      </p>
+
+      <h2>自然のサイン（象意）</h2>
+       <p>
+         厳しい寒さの中で見えた光の筋は、<br>  
+        「苦しい道の先にも、必ず光は差す」という<br>  
+         メッセージのようにも感じられます。<br>  
+          一歩ずつ進んだ先に、思いがけない景色が待っている――<br>  
+          そんなことを静かに教えてくれる風景でした。
+       </p>
+
+
+      <h2>フリー画像としての利用</h2>
+      <ul>
+        <li>商用・非商用：利用OK</li>
+        <li>クレジット表記：任意（していただけると励みになります）</li>
+        <li>禁止：画像そのものの再配布／素材としての転売</li>
+      </ul>
+
+      <p class="note">クレジット例：写真：山と神社の癒しフォト素材集（自然のサイン）</p>
+
+      <!-- ダウンロード導線（画像を直接開ける） -->
+      <a class="btn" href="../images/001.jpg" download>画像をダウンロード</a>
+
+      <p class="note">この写真は「山と神社の癒しフォト素材集（自然のサイン）」の一部です。</p>
+      <p class="note">※ブラウザによっては「開く」動作になる場合があります。その場合は右クリックで保存してください。</p>
+      <p class="note">▶ 次の写真：写真002（近日公開）</p>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="inner">
+      <p>&copy; 山と神社の癒しフォト素材集(フリー画像) 〜自然のサイン〜</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+<!-- 以上#001.html# -->
