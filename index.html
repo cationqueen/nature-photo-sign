@@ -170,6 +170,51 @@
       transform: translateX(4px);
     }
 
+    /* 写真一覧：サムネ付きカード表示 */
+    #photos .photo-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.9rem;
+    }
+
+    #photos .photo-card a {
+      display: block;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0.6rem;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #photos .photo-card a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    #photos .thumb {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+      background: #eee;
+    }
+
+    #photos .photo-title {
+      padding: 0.65rem 0.8rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      text-decoration: underline; /* 文字でもリンクだと分かる */
+    }
+
+    #photos .photo-meta {
+      padding: 0 0.8rem 0.75rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
 
   </style>
 </head>
@@ -267,10 +312,23 @@
         <section id="photos">
           <h3>写真一覧</h3>
           <h3>まずは1枚（サンプル公開）</h3>
-          <ul>
-            <li><a href="photos/001.html">写真001：山の風景</a></li>
-            <li><a href="photos/002.html">写真002：水平線と光る海</a></li>
-          </ul>
+          <ul class="photo-grid">
+              <li class="photo-card">
+                <a href="photos/001.html">
+                  <img class="thumb" src="images/001.jpg" alt="写真001：山の風景（文珠山山頂と天使の梯子）">
+                  <div class="photo-title">写真001：文珠山山頂と天使の梯子</div>
+                  <div class="photo-meta">カテゴリ：山の風景</div>
+                </a>
+              </li>
+
+              <li class="photo-card">
+                <a href="photos/002.html">
+                  <img class="thumb" src="images/002.jpg" alt="写真002：水平線と光る海">
+                  <div class="photo-title">写真002：水平線と光る海</div>
+                  <div class="photo-meta">カテゴリ：海・水辺</div>
+                </a>
+              </li>
+           </ul>
         </section>
          
         <p class="note">
@@ -402,4 +460,5 @@
 
 
 <!-- 以上#index.html(写真フリー素材)# -->
+
 
