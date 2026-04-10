@@ -22,29 +22,46 @@
   </script>
 
   <style>
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━
+       春テーマ（3〜5月）
+       桜がすみ × 若草
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    :root {
+      --season-header-from: #c8a4a5;  /* 桜がすみ */
+      --season-header-to:   #b8c4a8;  /* 若草かすみ */
+      --season-header-text: #3d2a2b;  /* 深い桜鼠 */
+      --season-accent:      #8fac7a;  /* 若草 */
+      --season-accent-soft: #d4e4c8;  /* 薄若草 */
+      --bg-main:            #f7f3f0;  /* 温かみのあるクリーム */
+      --bg-card:            #fffcfa;  /* ほんのり温かい白 */
+      --border-soft:        #e2d8d4;  /* 淡い桜縁 */
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.7;
-      background-color: #f5f5f5;
-      color: #222;
+      background-color: var(--bg-main);
+      color: #2e2424;
     }
     a {
       color: inherit;
       text-decoration: none;
     }
     header {
-      background: #111;
-      color: #f5f5f5;
+      background: linear-gradient(135deg, var(--season-header-from) 0%, var(--season-header-to) 100%);
+      color: var(--season-header-text);
       padding: 1rem 1.5rem;
       position: sticky;
       top: 0;
       z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
     }
     .site-title {
       font-size: 1.2rem;
       font-weight: 600;
       margin: 0;
+      letter-spacing: 0.02em;
     }
     nav {
       margin-top: 0.5rem;
@@ -52,7 +69,7 @@
     }
     nav a {
       margin-right: 1rem;
-      opacity: 0.85;
+      opacity: 0.8;
     }
     nav a:hover {
       opacity: 1;
@@ -62,18 +79,20 @@
       max-width: 960px;
       margin: 0 auto;
       padding: 1.5rem 1rem 3rem;
-      background-color: #f5f5f5;
+      background-color: var(--bg-main);
     }
     h1 {
       font-size: 1.6rem;
       margin-bottom: 0.75rem;
+      color: #2e2424;
     }
     h2 {
       font-size: 1.3rem;
       margin-top: 2.5rem;
       margin-bottom: 0.5rem;
-      border-left: 4px solid #555;
-      padding-left: 0.5rem;
+      border-left: 4px solid var(--season-accent);
+      padding-left: 0.6rem;
+      color: #2e2424;
     }
     h3 {
       font-size: 1.05rem;
@@ -93,21 +112,23 @@
     blockquote {
       margin: 0.6rem 0;
       padding: 0.6rem 0.8rem;
-      background: #fff;
-      border-left: 4px solid #ccc;
+      background: var(--bg-card);
+      border-left: 4px solid var(--season-accent-soft);
       font-size: 0.9rem;
+      color: #4a3636;
     }
     .lead {
       font-size: 1rem;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      background: var(--bg-card);
+      padding: 1rem 1.2rem;
+      border-radius: 0.8rem;
+      box-shadow: 0 2px 8px rgba(200, 164, 165, 0.15);
       margin-bottom: 1.5rem;
+      border: 1px solid var(--border-soft);
     }
     .note {
       font-size: 0.9rem;
-      color: #555;
+      color: #7a6060;
       margin-top: 0.5rem;
     }
     .link-list {
@@ -121,11 +142,11 @@
       text-decoration: underline;
     }
     footer {
-      border-top: 1px solid #ddd;
+      border-top: 1px solid var(--border-soft);
       padding: 1rem 1rem 2rem;
       font-size: 0.8rem;
-      color: #666;
-      background: #fafafa;
+      color: #7a6060;
+      background: #f0ebe8;
     }
     footer .inner {
       max-width: 960px;
@@ -155,17 +176,17 @@
 
     .photo-card a {
       display: block;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 0.6rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 0.8rem;
       overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 8px rgba(200, 164, 165, 0.12);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .photo-card a:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 20px rgba(200, 164, 165, 0.25);
     }
 
     .thumb {
@@ -173,7 +194,7 @@
       aspect-ratio: 16 / 10;
       object-fit: cover;
       display: block;
-      background: #eee;
+      background: var(--season-accent-soft);
     }
 
     .photo-title {
@@ -181,14 +202,16 @@
       font-size: 0.9rem;
       line-height: 1.4;
       text-decoration: underline;
+      color: #3a2828;
     }
 
     .category-link a {
       text-decoration: underline;
+      color: #3a2828;
     }
 
     .category-link a:hover {
-      color: #0077cc;
+      color: var(--season-accent);
     }
 
   </style>
